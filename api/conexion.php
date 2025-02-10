@@ -6,10 +6,10 @@ if (file_exists(__DIR__ . "../.env")) {
     $_ENV = array_merge($_ENV, $env);
 }
 // Configuración de conexión segura
-$servername = $_ENV["DB_HOST"] ?? "34.55.220.177"; 
-$username   = $_ENV["DB_USERNAME"] ?? "root";
-$password   = $_ENV["DB_PASSWORD"] ?? "2008";
-$dbname     = $_ENV["DB_NAME"] ?? "portafolio_csp";
+$servername = "34.55.220.177"; 
+$username   = "root";
+$password   = "2008";
+$dbname     = "portafolio_csp";
 
 // Conexión a la base de datos
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -22,11 +22,6 @@ if ($conn->connect_error) {
 } 
 
 $conn->set_charset("utf8mb4");
-
-// echo json_encode([
-//     'success' => true,
-//     'message' => 'Conexión exitosa desde Vercel'
-// ]);
 
 ?>
 

@@ -35,9 +35,6 @@ $resultado = $stmt->get_result();
 if ($resultado->num_rows > 0) {
     $usuario = $resultado->fetch_assoc();
 
-    // error_log('Contraseña recibida: ' . $contrasena);
-    // error_log('Hash almacenado: ' . $usuario['contrasena']);
-
     if(password_verify($contrasena, $usuario['contrasena'])){
         $_SESSION['nombres'] = $usuario['nombres'];
         echo json_encode([ 
