@@ -7,5 +7,4 @@ if ($conn->ping()) {
 } else {
     echo json_encode(["success" => false, "message" => "Error en la conexión"]);
 }
-
 ?>
